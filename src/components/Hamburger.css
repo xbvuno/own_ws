@@ -1,0 +1,58 @@
+#ham {
+    cursor: pointer;
+    user-select: none;
+    transform: scale(2);
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: 0.5s;
+}
+
+@media (hover: hover) {
+    #ham:hover {
+        background-color: var(--pico-primary) !important;
+        border-radius: 4px;
+    }
+    
+    #ham:hover .line {
+        stroke: var(--pico-background-color) !important;
+    }    
+}
+
+
+#ham.active {
+    transform: scale(2)  rotate(45deg) ;
+    border-radius: 1.5rem;
+}
+
+#ham .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: var(--pico-primary) !important;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+#ham .top {
+    stroke-dasharray: 40 82;
+}
+
+#ham .middle {
+    stroke-dasharray: 40 111;
+}
+
+#ham .bottom {
+    stroke-dasharray: 40 161;
+}
+
+#ham.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+}
+
+#ham.active .middle {
+    stroke-dashoffset: 23px;
+}
+
+#ham.active .bottom {
+    stroke-dashoffset: -83px;
+}

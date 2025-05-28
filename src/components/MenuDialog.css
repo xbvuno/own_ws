@@ -1,0 +1,53 @@
+#menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: color-mix(in srgb, var(--pico-background-color) 80%, transparent);
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 3;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none; /* Aggiungi questa linea per disabilitare gli eventi del mouse */
+}
+
+#menu.shown {
+    opacity: 1;
+    transition: 0.5s;
+    padding: 32px;
+    backdrop-filter: blur(8px);
+    pointer-events: auto; /* Aggiungi questa linea per abilitare gli eventi del mouse quando il menu è visibile */
+}
+
+body:has(#menu.shown) {
+    overflow-y: hidden;
+    padding-right: 4px;
+}
+
+#menu * {
+    font-weight: normal;
+    font-family: var(--font-space-mono);
+    color: gray;
+}
+
+#menu a, #menu b {
+    font-weight: 700;
+    font-family: var(--font-ubuntu);
+    color: var(--pico-primary);
+}
+
+#menu h1:first-child b {
+    padding-bottom: 0;
+    color: white;
+}
+
+#menu a:hover, #menu b:hover:not(h1:first-child b) {
+    color: var(--pico-primary-hover) !important;
+    text-shadow: 0px 0px 8px var(--pico-primary-hover);
+    transition: 0.5s;
+}
+
+#menu a:hover {
+    cursor: pointer;
+}

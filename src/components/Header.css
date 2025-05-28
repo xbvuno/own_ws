@@ -1,0 +1,50 @@
+header {
+	position: fixed;
+	z-index: 4;
+	bottom: 0;
+	transition: 0.5s;
+	max-height: 4rem;
+	padding: 2rem !important;
+	padding-top: 0 !important;
+	display: flex;
+	justify-content: space-between;
+}
+
+header b,
+strong {
+	padding: 0;
+	margin: 0;
+	width: min-content;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+}
+
+header b {
+	letter-spacing: 1px;
+	font-family: var(--font-ubuntu);
+}
+
+header strong {
+	font-family: var(--font-roboto);
+}
+
+.glitch {
+	animation: glitch-text 1s step-start infinite;
+}
+
+@keyframes glitch-text {
+	30% {
+		scale: 2;
+		translate: 2rem 0;
+	}
+	60% {
+		scale: -2;
+		translate: 0 -2rem;
+	}
+	90% {
+		scale: 1;
+		rotate: 180deg;
+	}
+}

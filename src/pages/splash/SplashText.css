@@ -1,0 +1,95 @@
+#splash-text {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    overflow: hidden !important
+}
+
+
+#splash-text div {
+    position: absolute;
+    z-index: 3;
+    transform: scale(min(calc(var(--vw-scale) / 400), 3));
+}
+
+#splash-text div * {
+    margin: 0;
+    font-family: var(--font-space-mono)
+}
+
+#splash-text div p {
+    font-size: 16px;
+    font-weight:lighter;
+    color: gray
+}
+
+#splash-text div h1 {
+    font-size: 64px;
+    font-weight: bolder;
+    font-family: var(--font-ubuntu)
+}
+
+#splash-text div p:first-child {
+    white-space: nowrap;
+    position: absolute;
+    top: 0px;
+    left: 20px
+}
+
+#splash-text div p:last-child {
+    white-space: nowrap;
+    position: absolute;
+    top: 38px;
+    left: 180px;
+}
+
+#splash-text div.rnd-effect-0 {
+    transform: scaleX(-1) translate(5vw);
+}
+
+#splash-text div.rnd-effect-1 {
+    transform: scale(-1) translate(132px, 232px) rotate(90deg);
+}
+
+#splash-text div.rnd-effect-2 {
+    transform: scaleY(-3) translate(-110px, 232px) ;
+}
+
+#splash-text div.rnd-effect-3 {
+    transform: scaleY(-1) translate(-130px, 232px) rotate(90deg) ;
+}
+
+#splash-text div.rnd-effect-4 {
+    transform: scaleX(1.5) translate(110px, 22px);
+}
+
+#splash-text div.rnd-effect-5 {
+    transform: scaleX(-2) ;
+}
+
+#splash-text div.rnd-effect-6 {
+    transform: scaleY(-3) translate(130px, 21px);
+}
+
+#splash-text div.rnd-effect-7 {
+    transform:  translate(130px, -201px);
+}
+
+#splash-text div.rnd-effect-8 {
+    transform: scaleX(1.5) translate(110px, 22px)  ;
+}
+
+#splash-text div.rnd-effect-9 {
+    transform:  rotate(90deg);
+}
+
+#splash-text div.rnd-effect-10 {
+    transform: scaleY(-3) translate(130px, 21px) ;
+}
+
+#splash-text div.rnd-effect-11 {
+    transform: rotate(180deg);
+}
